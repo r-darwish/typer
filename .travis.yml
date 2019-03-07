@@ -9,4 +9,4 @@ install:
   - pip install .[test]
 
 script:
-  - python -c "import typer"
+  - pytest tests

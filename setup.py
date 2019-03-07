@@ -25,7 +25,7 @@ setup(
     package_data={"": ["LICENSE"]},
     python_requires=">=3.5",
     install_requires=required,
-    extras_require={"test": ["pytest", "mypy", "pylint"]},
+    extras_require={"test": ["pytest", "mypy", "pylint", "dataclasses; python_version<'3.7'"]},
     include_package_data=True,
     license="GPL3",
     classifiers=[
