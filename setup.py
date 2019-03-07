@@ -23,7 +23,7 @@ setup(
     url="https://github.com/r-darwish/typer",
     packages=find_packages(exclude=["tests", "tests.*"]),
     package_data={"": ["LICENSE"]},
-    python_requires=">=3.5",
+    python_requires=">=3.6",
     install_requires=required,
     extras_require={"test": ["pytest", "mypy", "pylint", "dataclasses; python_version<'3.7'"]},
     include_package_data=True,
@@ -31,7 +31,6 @@ setup(
     classifiers=[
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
     ],
