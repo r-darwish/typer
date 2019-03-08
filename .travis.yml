@@ -8,4 +8,4 @@ install:
   - pip install .[test]
 
 script:
-  - pytest tests
+  - pytest --flake8 tests

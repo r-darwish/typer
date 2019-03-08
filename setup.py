@@ -8,7 +8,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 about = {}
 
 with open(os.path.join(here, "typer", "__version__.py")) as f:
-    exec(f.read(), about) # pylint: disable=exec-used
+    exec(f.read(), about)  # pylint: disable=exec-used
 
 required = []
 
@@ -25,7 +25,7 @@ setup(
     package_data={"": ["LICENSE"]},
     python_requires=">=3.6",
     install_requires=required,
-    extras_require={"test": ["pytest", "mypy", "pylint", "dataclasses; python_version<'3.7'"]},
+    extras_require={"test": ["pytest", "mypy", "pytest-flake8", "dataclasses; python_version<'3.7'"]},
     include_package_data=True,
     license="GPL3",
     classifiers=[

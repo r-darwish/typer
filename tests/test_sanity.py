@@ -1,9 +1,17 @@
-import sys
 from typer import from_dict
 
-if sys.version_info.minor < 7:
-    from dataclasses import dataclass
+from dataclasses import dataclass
+
+
+@dataclass
+@from_dict
+class Data:
+    number: int
+    name: str
 
 
 def test_sanity():
-    pass
+    instance = Data.from_dict({'number': 1, 'name': "hi"})
+    assert isinstance(instance, Data)
+    assert instance.number == 1
+    assert instance.name == "hi"
