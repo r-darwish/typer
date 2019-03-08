@@ -1,16 +1,17 @@
 #!/usr/bin/env python
 import os
+from typing import Dict, Any, List
 
 from setuptools import find_packages, setup
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-about = {}
+about: Dict[str, Any] = {}
 
 with open(os.path.join(here, "typer", "__version__.py")) as f:
     exec(f.read(), about)  # pylint: disable=exec-used
 
-required = []
+required: List[str] = []
 
 setup(
     name="typer",
@@ -25,7 +26,7 @@ setup(
     package_data={"": ["LICENSE"]},
     python_requires=">=3.6",
     install_requires=required,
-    extras_require={"test": ["pytest", "mypy", "pytest-flake8", "dataclasses; python_version<'3.7'"]},
+    extras_require={"test": ["pytest", "pytest-mypy", "pytest-flake8", "dataclasses; python_version<'3.7'"]},
     include_package_data=True,
     license="GPL3",
     classifiers=[
