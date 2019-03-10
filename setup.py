@@ -26,8 +26,15 @@ setup(
     package_data={"": ["LICENSE"]},
     python_requires=">=3.6",
     install_requires=required,
-    extras_require={"test": ["pytest", "pytest-mypy", "pytest-flake8",
-                             "dataclasses; python_version<'3.7'"]},
+    extras_require={
+        "test": [
+            "pytest",
+            "pytest-mypy",
+            "pytest-flake8",
+            "dataclasses; python_version<'3.7'",
+            "black==18.9b0",
+        ]
+    },
     include_package_data=True,
     license="GPL3",
     classifiers=[

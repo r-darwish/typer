@@ -10,7 +10,7 @@ class Data:
 
 
 def test_sanity() -> None:
-    instance = from_dict(Data, {'number': 1, 'name': "hi"})
+    instance = from_dict(Data, {"number": 1, "name": "hi"})
     assert isinstance(instance, Data)
     assert instance.number == 1
     assert instance.name == "hi"

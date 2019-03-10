@@ -9,3 +9,4 @@ install:
 
 script:
   - pytest --flake8 --mypy tests
+  - black --check .
